@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=MarcoDeDatos
+comment1.params=CSVleer\ CSVescribir\ datos
+comment1.target=MarcoDeDatos(java.lang.String,\ java.lang.String,\ java.util.ArrayList)
+comment10.params=
+comment10.target=void\ EscribirFicheroCSV()
+comment2.params=
+comment2.target=void\ MostrarDatos()
+comment3.params=
+comment3.target=java.lang.String\ getCSVleer()
+comment4.params=CSVleer
+comment4.target=void\ setCSVleer(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getCSVescribir()
+comment6.params=CSVescribir
+comment6.target=void\ setCSVescribir(java.lang.String)
+comment7.params=
+comment7.target=java.util.ArrayList\ getDatos()
+comment8.params=datos
+comment8.target=void\ setDatos(java.util.ArrayList)
+comment9.params=
+comment9.target=void\ LeerFicheroCSV()
+numComments=11
