@@ -66,14 +66,6 @@ public class MarcoDeDatos{
                 if(cont != 0){
                     System.out.println(LeerLinea);
                     String[] datoslinea = LeerLinea.split(",");
-                    System.out.println(datoslinea.length+"adsga");
-                    System.out.println(datoslinea[0]);
-                    System.out.println(datoslinea[1]);
-                    System.out.println(datoslinea[2]);
-                    System.out.println(datoslinea[3]);
-                    System.out.println(datoslinea[4]);
-                    System.out.println(datoslinea[5]);
-                    System.out.println(datoslinea[6]);
                     String estacion = datoslinea[0].trim();
                     String nombre = datoslinea[1].trim();
                     String pais = datoslinea[2].trim();
