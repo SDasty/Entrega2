@@ -66,16 +66,69 @@ public class MarcoDeDatos{
                 if(cont != 0){
                     System.out.println(LeerLinea);
                     String[] datoslinea = LeerLinea.split(",");
+                    if(datoslinea.length == 8){
                     String estacion = datoslinea[0].trim();
                     String nombre = datoslinea[1].trim();
                     String pais = datoslinea[2].trim();
                     String fecha = datoslinea[3].trim();
-                    String precipitacion = datoslinea[4].trim();
-                    String tpromedio = datoslinea[5].trim();
-                    String tmax = datoslinea[6].trim();
-                    String tmin = datoslinea[7].trim();
+                    double precipitacion = Double.parseDouble(datoslinea[4].trim());
+                    double tpromedio = Double.parseDouble(datoslinea[5].trim());
+                    double tmax = Double.parseDouble(datoslinea[6].trim());
+                    double tmin = Double.parseDouble(datoslinea[7].trim());
                     Dato d = new Dato(estacion, nombre, pais, fecha, precipitacion, tpromedio, tmax, tmin);
-                    this.datos.add(d);
+                    this.datos.add(d);    
+                    }
+                    if(datoslinea.length == 7){
+                    String estacion = datoslinea[0].trim();
+                    String nombre = datoslinea[1].trim();
+                    String pais = datoslinea[2].trim();
+                    String fecha = datoslinea[3].trim();
+                    double precipitacion = Double.parseDouble(datoslinea[4].trim());
+                    double tpromedio = Double.parseDouble(datoslinea[5].trim());
+                    double tmax = Double.parseDouble(datoslinea[6].trim());
+                    double tmin = 0;
+                    Dato d = new Dato(estacion, nombre, pais, fecha, precipitacion, tpromedio, tmax, tmin);
+                    this.datos.add(d);    
+                    }
+                    else if(datoslinea.length == 6){
+                    String estacion = datoslinea[0].trim();
+                    String nombre = datoslinea[1].trim();
+                    String pais = datoslinea[2].trim();
+                    String fecha = datoslinea[3].trim();
+                    double precipitacion = Double.parseDouble(datoslinea[4].trim());
+                    double tpromedio = Double.parseDouble(datoslinea[5].trim());
+                    double tmax = 0;
+                    double tmin = 0;
+                    Dato d = new Dato(estacion, nombre, pais, fecha, precipitacion, tpromedio, tmax, tmin);
+                    this.datos.add(d);    
+                    }
+                    else if(datoslinea.length == 5){
+                    String estacion = datoslinea[0].trim();
+                    String nombre = datoslinea[1].trim();
+                    String pais = datoslinea[2].trim();
+                    String fecha = datoslinea[3].trim();
+                    double precipitacion = Double.parseDouble(datoslinea[4].trim());
+                    double tpromedio = 0;
+                    double tmax = 0;
+                    double tmin = 0;
+                    
+                    Dato d = new Dato(estacion, nombre, pais, fecha, precipitacion, tpromedio, tmax, tmin);
+                    this.datos.add(d);    
+                    }
+                    else if(datoslinea.length == 4){
+                    String estacion = datoslinea[0].trim();
+                    String nombre = datoslinea[1].trim();
+                    String pais = datoslinea[2].trim();
+                    String fecha = datoslinea[3].trim();
+                    double precipitacion = 0;
+                    double tpromedio = 0;
+                    double tmax = 0;
+                    double tmin = 0;
+                    
+                    Dato d = new Dato(estacion, nombre, pais, fecha, precipitacion, tpromedio, tmax, tmin);
+                    this.datos.add(d);    
+                    }
+                    
                 }
                 else{
                 cont++;
@@ -101,10 +154,10 @@ public class MarcoDeDatos{
                 String textonombre = d.getNombre();
                 String textopais = d.getPais();
                 String textofecha = d.getFecha();
-                String textoprecipitacion = d.getPrecipitacion();
-                String textoTpromedio = d.getTpromedio();
-                String textoTmax = d.getTmax();
-                String textoTmin = d.getTmin();
+                double textoprecipitacion = d.getPrecipitacion();
+                double textoTpromedio = d.getTpromedio();
+                double textoTmax = d.getTmax();
+                double textoTmin = d.getTmin();
                 lineaTexto = textoestacion + "," + textonombre + "," + textopais + "," + textofecha + "," + textoprecipitacion + "," + textoTpromedio + "," + textoTmax + "," + textoTmin +"/n";
                 bw.write(lineaTexto);
             }

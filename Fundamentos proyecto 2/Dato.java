@@ -3,12 +3,12 @@ public class Dato{
     private String nombre;
     private String pais;
     private String fecha;
-    private String precipitacion;
-    private String tpromedio;
-    private String tmax;
-    private String tmin;
+    private double precipitacion;
+    private double tpromedio;
+    private double tmax;
+    private double tmin;
     
-    public Dato(String estacion, String nombre, String pais, String fecha, String precipitacion, String tpromedio, String tmax, String tmin){
+    public Dato(String estacion, String nombre, String pais, String fecha, double precipitacion, double tpromedio, double tmax, double tmin){
         this.estacion = estacion;
         this.nombre = nombre;
         this.pais= pais;
@@ -32,16 +32,16 @@ public class Dato{
     public String getFecha(){return this.fecha;}
     public void setFecha(){this.fecha = fecha;}
     
-    public String getPrecipitacion(){return this.precipitacion;}
+    public double getPrecipitacion(){return this.precipitacion;}
     public void setPrecipitacion(){this.precipitacion = precipitacion;}
     
-    public String getTpromedio(){return this.tpromedio;}
+    public double getTpromedio(){return this.tpromedio;}
     public void setTpromedio(){this.tpromedio = tpromedio;}
     
-    public String getTmax(){return this.tmax;}
+    public double getTmax(){return this.tmax;}
     public void setTmax(){this.tmax = tmax;}
     
-    public String getTmin(){return this.tmin;}
+    public double getTmin(){return this.tmin;}
     public void setTmin(){this.tmin = tmin;}
     
     @Override
